@@ -1,0 +1,50 @@
+<p>create-train works!</p>
+<div>
+  <app-admin-navigation-bar></app-admin-navigation-bar>
+  <div class="d-flex justify-content-center">
+    <div class="card bg-light mb-3">
+      <div class="card-header">
+        <h3 class="d-flex justify-content-center">Create Train</h3>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">
+          <form (submit)="handleSubmit()">
+            <div class="form-row">
+              <div class="col">
+                <label for="trainid">Train Id</label>
+                <input type="text" class="form-control" id="trainid" [(ngModel)]="trainid" name="trainid">
+              </div>
+              <div class="col">
+                <label for="trainName">Train Name</label>
+                <input type="text" class="form-control" id="trainName" [(ngModel)]="trainName" name="trainName" required>
+              </div>
+            </div>
+            <br>
+            <div class="form-row">
+              <div class="col">
+                <label for="startStation">Source</label>
+                <input id="startStation" class="form-control" [(ngModel)]="startStation" name="startStation" required>
+              </div>
+              <div class="col">
+                <label for="endStation">Destination</label>
+                <input id="endStation" class="form-control" [(ngModel)]="endStation" name="endStation" required>
+              </div>
+              <div class="col">
+                <label for="fare">Fare</label>
+                <input id="fare" class="form-control" [(ngModel)]="fare" name="fare" required>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div>
+              <button type="submit" class="btn btn-dark btn-lg btn-block">Add Train</button>
+              <p>Delete Train? <a routerLink="/deleteTrain">Click Here</a></p>
+            </div>
+          </form>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+  

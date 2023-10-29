@@ -1,0 +1,21 @@
+<p>contact-list works!</p>
+<div style="background-color: blue;">
+  <h2 class="text-center table-striped ">Contact Us</h2>
+  <table class="table table-striped" style="margin-top: 20px;">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Mobile Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Use the loop variable 'item' to access properties of each contact -->
+      <tr *ngFor="let contact of contactList">
+        <td>{{ contact.id }}</td>
+        <td>{{ contact.name }}</td>
+        <td>{{ contact.phoneNumber }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,51 @@
+<div style="background-image: url('../assets/rail.jpg');background-repeat: no-repeat;
+background-attachment: fixed;background-size: cover; height: 100vh; display: flex;
+ align-items: center; justify-content: center;">
+    <!-- <br><br>
+    <h2 class="top">Online Railway Reservation</h2> -->
+    <div class="container" style="max-width: 600px;">
+      <div class="card">
+        <h3 class="card-header info-color white-text text-center py-4" >
+          <strong style="color: black; font-style: italic; font-weight: bolder;">BOOK TRAIN TICKETS ONLINE</strong>
+        </h3>
+        <div class="card-body px-lg-5">
+            <form class="text-center " style="color: #645b5b; font-weight: 900;" (submit)="storeDetails()">            
+            <label>From:</label>
+            <select class="browser-default custom-select mb-4" [(ngModel)]="startStation" [ngModelOptions]="{standalone: true}" (change)="checkSource($event)">
+              <option value="" disabled selected>Choose option</option>
+              <option value="Patna">Patna</option>
+              <option value="New Delhi">New Delhi</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Ranchi">Ranchi</option>
+              <option value="Agra">Agra</option>
+              <option value="Bhopal">Bhopal</option>
+              <option value="Jaipur">Jaipur</option>
+              <option value="Bangalore">Bangalore</option>
+            </select>
+            <br>
+            <label>To:</label>
+            <select class="browser-default custom-select mb-4" [(ngModel)]="endStation" [ngModelOptions]="{standalone: true}" (change)="checkDestination($event)">
+              <option value="" disabled selected>Choose option</option>
+              <option value="Patna">Patna</option>
+              <option value="New Delhi">New Delhi</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Ranchi">Ranchi</option>
+              <option value="Agra">Agra</option>
+              <option value="Bhopal">Bhopal</option>
+              <option value="Jaipur">Jaipur</option>
+              <option value="Bangalore">Bangalore</option>
+            </select>
+            <br>
+            <label>No of Tickets:</label>
+            <input type="text" placeholder="No of tickets" class="form-control " [(ngModel)]="quantity" [ngModelOptions]="{standalone: true}" name="quantity" (change)="checkTickets($event)" />
+  
+            <button class="btn btn-primary btn-rounded btn-block z-depth-2 my-4 waves-effect text-center" type="submit">
+              <span style=" font-size: 1.2rem;">NEXT</span>
+            </button>
+            
+            <!-- <button style="align-content: center; text-align: center;" class="btn btn-outline-primary btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">NEXT</button> -->
+          </form>
+        </div>
+      </div>
+  </div>
+</div>

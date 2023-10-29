@@ -1,0 +1,34 @@
+
+<div style="background-image: url('../../assets/rail.jpg');background-repeat: no-repeat;
+background-attachment: fixed;background-size: cover; height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <div class="container d-flex justify-content-center" style="margin-top: 0;">
+        <div class="card" style="width: 600px;">
+          <h5 class="card-header info-color white-text text-center py-4" style="background-color:rgb(218, 152, 29);">
+            <strong style="color: white;">
+              <h2 class="center">Your Details</h2>
+              <h3>Source: <input type="text" [value]="source" readonly style="background-color: #80aaff;"></h3>
+              <h3>Destination: <input type="text" [value]="destination" readonly style="background-color: #80aaff;"></h3>
+              <h3>No of Tickets: <input type="text" [value]="nooftickets" readonly style="background-color: #80aaff;"></h3>
+              <h3>Your Total Bill: <input type="text" [value]="total" readonly style="background-color: #80aaff;"></h3>
+              
+              <br>
+            </strong>
+          </h5>
+  
+          <div class="card-body px-lg-5">
+            <form class="text-center" style="color: #757575;" (ngSubmit)="handleSubmit($event)">
+              <div class="custom-control custom-radio">
+                <strong>Select the Payment Method</strong><br>
+                <input type="radio" class="custom-control-input" id="mobilenum" name="method" value="mobile" (change)="handleChange($event)" [(ngModel)]="method">
+                <label class="custom-control-label" for="mobilenum">
+                  <img src="../../assets/razorpay.png" width="100" height="20">
+                  Payment through Razorpay
+                </label>
+              </div>
+              <button class="btn btn-outline-primary btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">NEXT</button>
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
+  

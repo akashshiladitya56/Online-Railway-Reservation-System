@@ -1,0 +1,25 @@
+<p>train-list works!</p>
+<div>
+    <h3>Trains</h3>
+    <table class="table table-striped" style="margin-top: 20px;">
+      <thead>
+        <tr>
+          <th>TrainID</th>
+          <th>Train Name</th>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Fare</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let train of traintickets">
+          <td>{{ train.trainid }}</td>
+          <td>{{ train.trainName }}</td>
+          <td>{{ train.startStation }}</td>
+          <td>{{ train.endStation }}</td>
+          <td>{{ train.fare }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

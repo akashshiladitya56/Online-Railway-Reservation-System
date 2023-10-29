@@ -1,0 +1,31 @@
+<div>
+    <app-admin-navigation-bar></app-admin-navigation-bar>
+    <br><br><br>
+  
+    <div class="d-flex justify-content-center">
+      <div class="card bg-light mb-3">
+        <div class="card-header">
+          <h3 class="d-flex justify-content-center">Delete Contact</h3>
+          <p>{{ alertMessage }}</p>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">
+            <form>
+              <div class="form-row">
+                <div class="col">
+                  <label for="id">ContactId</label>
+                  <input id="id" class="form-control" [(ngModel)]="id" name="id" required>
+                </div>
+                <br>
+                <div class="col">
+                  <button (click)="deleteContact()">Delete Contact</button>
+                </div>
+                <br>
+              </div>
+            </form>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  

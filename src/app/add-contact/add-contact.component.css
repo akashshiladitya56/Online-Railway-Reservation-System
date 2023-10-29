@@ -1,0 +1,14 @@
+body {
+    background-color: #328f8a;
+    background-image: url("../../assets/rail.jpg");
+    height: 100%; 
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 150vh;
+    }

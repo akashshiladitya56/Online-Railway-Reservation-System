@@ -1,0 +1,40 @@
+<body>
+<app-admin-navigation-bar></app-admin-navigation-bar>
+
+<br><br><br>
+<div class="d-flex justify-content-center">
+    <div class="card bg-light mb-3">
+      <div class="card-header">
+        <h2 class="d-flex justify-content-center">Add Contact</h2>
+        <!-- <h3 class="d-flex justify-content-center">Create Train</h3> -->
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">
+
+          <form [formGroup]="addContactForm" (ngSubmit)="addContact()">
+            <div class="form-row">
+              <div class="col">
+              <label for="name">Name:</label>
+              <input type="text" id="name" formControlName="name">
+              <div *ngIf="addContactForm.get('name')?.touched && addContactForm.get('name')?.errors?.['required']" class="error-message">
+                <span>Name is required.</span>
+              </div>
+            </div>
+            <br>
+            <div class="col">
+              <label for="phoneNumber">Phone Number:</label>
+              <input type="text" id="phoneNumber" formControlName="phoneNumber">
+              <div *ngIf="addContactForm.get('phoneNumber')?.touched && addContactForm.get('phoneNumber')?.errors?.['invalidPhoneNumber']" class="error-message">
+                <span>Phone Number must be a 10-digit number.</span>
+              </div>
+            </div>
+          </div>
+            <div>
+              <button type="submit" [disabled]="!addContactForm.valid">Add Contact</button>
+            </div>
+          </form>
+        </h5>
+      </div>
+    </div>
+  </div>
+</body>

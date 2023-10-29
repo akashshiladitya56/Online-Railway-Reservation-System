@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin SignIn</title>
+</head>
+<body>
+  <div class="login-page">
+    <div class="form">
+      <div class="admin">
+        <div class="login-header">
+          <h3>ADMIN LOGIN</h3>
+        </div>
+      </div>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+        <div class="form-group">
+          <label>username</label>
+          <input type="username" class="form-control" id="username" placeholder="Enter username" formControlName="username">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter Password" formControlName="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <div>
+          <p class="message">User Login?<a href="/">Click here</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
